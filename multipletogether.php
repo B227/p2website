@@ -13,8 +13,13 @@
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
       /* select all the weekly tasks from the table googlechart */
-      $result = $conn->query('SELECT * FROM SM3');
-      $result2 = $conn->query('SELECT * FROM SM3');
+      
+      $result = $conn-> prepare('SELECT id, effect, effectHour, voltage, ampere, timeStamp, totalStr FROM SM2 WHERE id = :smid');
+      $result->execute(array('smid' => 8));
+      
+      $result2 = $conn-> prepare('SELECT id, effect, effectHour, voltage, ampere, FROM_UNIXTIME(timeStamp), totalStr FROM SM2 WHERE id = :smid');
+      $result2->execute(array('smid' => 8));
+      
 
 
 
