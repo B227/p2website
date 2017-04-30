@@ -1,40 +1,4 @@
 <?php
-    /*
-    Script  : PHP-PDO-JSON-mysql-googlechart
-    Author  : Enam Hossain
-    version : 1.0
-
-    */
-
-    /*
-    --------------------------------------------------------------------
-    Usage:
-    --------------------------------------------------------------------
-
-    Requirements: PHP, Apache and MySQL
-
-    Installation:
-
-      --- Create a database by using phpMyAdmin and name it "chart"
-      --- Create a table by using phpMyAdmin and name it "googlechart" and make sure table has only two columns as I have used two columns. However, you can use more than 2 columns if you like but you have to change the code a little bit for that
-      --- Specify column names as follows: "weekly_task" and "percentage"
-      --- Insert some data into the table
-      --- For the percentage column only use a number
-
-          ---------------------------------
-          example data: Table (googlechart)
-          ---------------------------------
-
-          weekly_task     percentage
-          -----------     ----------
-
-          Sleep           30
-          Watching Movie  10
-          job             40
-          Exercise        20     
-
-
-    */
 
     /* Your Database Name */
     $dbname = 'gameboos_SM';
